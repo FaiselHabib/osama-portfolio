@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiEye, FiDownload, FiBarChart2, FiTrendingUp, FiLayers, FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { FiEye, FiDownload, FiBarChart2, FiLayers, FiChevronDown, FiChevronUp } from "react-icons/fi";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -189,62 +189,7 @@ export default function PortfolioSection() {
             </div>
           </motion.div>
 
-          {/* PROJECT 2: Explanatory Insights as standalone */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ delay: 0.1, duration: 0.55, ease: "easeOut" as const }}
-            className="rounded-2xl bg-card border border-border hover:border-accent-light/30 hover:shadow-md transition-all duration-300 overflow-hidden"
-          >
-            <div className="p-6 sm:p-8">
-              <div className="flex flex-wrap items-start justify-between gap-3 mb-5">
-                <div className="flex items-center gap-3">
-                  <div className="p-3 rounded-xl bg-accent-light/10 text-accent-light">
-                    <FiTrendingUp size={20} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-foreground">Explanatory Insights Summary</h3>
-                    <p className="text-sm text-muted-foreground">Data Storytelling and Analysis</p>
-                  </div>
-                </div>
-                <span className="px-3 py-1 rounded-full bg-green-500/10 text-green-600 dark:text-green-400 text-xs font-medium">
-                  Individually created by me
-                </span>
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-4 mb-5 text-sm">
-                <div>
-                  <h4 className="text-xs font-semibold text-foreground uppercase tracking-wide mb-1.5">Context</h4>
-                  <p className="text-muted-foreground leading-relaxed">
-                    After building the exploratory dashboard, I created this summary to explain the most important findings in a clear, business-friendly way.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-xs font-semibold text-foreground uppercase tracking-wide mb-1.5">Skills</h4>
-                  <div className="flex flex-wrap gap-1.5">
-                    {["Data Storytelling", "Communication", "Analytical Thinking"].map((s) => (
-                      <span key={s} className="px-2 py-0.5 rounded-full bg-muted text-xs text-muted-foreground">{s}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="mb-4 p-4 rounded-xl bg-muted/40 text-sm">
-                <p className="text-muted-foreground leading-relaxed">
-                  The key finding: Blue cardholders have the lowest average credit limits ($6,817 attrited vs $7,465 existing) and face the highest attrition risk. Gold and Platinum holders have much higher limits, suggesting a stronger financial relationship with the bank. Credit limits also tend to grow with customer tenure, but attrited customers show more volatility early on.
-                </p>
-              </div>
-
-              <PDFEmbed
-                src="/explanatory-insights.pdf"
-                title="Explanatory 1.pdf"
-                downloadName="Explanatory_Insights.pdf"
-              />
-            </div>
-          </motion.div>
-
-          {/* PROJECT 3: Liquid Death */}
+          {/* PROJECT 2: Liquid Death */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
