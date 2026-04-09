@@ -8,7 +8,7 @@ const fadeUp = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" as const },
+    transition: { delay: i * 0.12, duration: 0.55, ease: "easeOut" as const },
   }),
 };
 
@@ -22,20 +22,21 @@ export default function HeroSection() {
       id="home"
       className="relative min-h-screen flex items-center justify-center px-6 pt-24 pb-16 overflow-hidden"
     >
-      {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-accent/5" />
-      <div className="absolute top-1/4 -right-32 w-96 h-96 rounded-full bg-accent-light/5 blur-3xl" />
-      <div className="absolute bottom-1/4 -left-32 w-96 h-96 rounded-full bg-accent/5 blur-3xl" />
+      {/* Background gradients */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-accent-light/5" />
+      <div className="absolute top-1/3 right-0 w-72 h-72 rounded-full bg-accent-light/8 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 left-0 w-72 h-72 rounded-full bg-accent-warm/5 blur-3xl pointer-events-none" />
 
-      <div className="relative max-w-3xl mx-auto text-center">
+      <div className="relative max-w-2xl mx-auto text-center">
         <motion.div
           custom={0}
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="inline-block mb-6 px-4 py-1.5 rounded-full bg-accent-light/10 text-accent-light text-sm font-medium"
+          className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-accent-light/10 text-accent-light text-sm font-medium"
         >
-          University of Arizona &middot; Eller College of Management
+          <span className="w-2 h-2 rounded-full bg-accent-light animate-pulse" />
+          University of Arizona, Eller College of Management
         </motion.div>
 
         <motion.h1
@@ -43,7 +44,7 @@ export default function HeroSection() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-foreground mb-4"
+          className="text-5xl sm:text-6xl font-bold tracking-tight text-foreground mb-4 leading-tight"
         >
           Osama Abudawood
         </motion.h1>
@@ -63,7 +64,7 @@ export default function HeroSection() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="text-base text-muted-foreground mb-8 max-w-xl mx-auto"
+          className="text-base text-muted-foreground mb-10 max-w-lg mx-auto leading-relaxed"
         >
           Building a future in business management through consistency, accountability, and growth.
         </motion.p>
@@ -73,26 +74,21 @@ export default function HeroSection() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="max-w-2xl mx-auto text-left space-y-4 text-muted-foreground leading-relaxed mb-10"
+          className="max-w-xl mx-auto text-left space-y-4 text-muted-foreground leading-relaxed mb-10 text-sm"
         >
           <p>
             Hey, I&apos;m Osama. I&apos;m a business management student at the University of Arizona
-            working toward a career where I can lead teams, improve processes, and create real
-            impact.
+            working toward a career in leadership, process improvement, and team building.
           </p>
           <p>
-            I take pride in being reliable, consistent, and someone people can count on. Moving
-            across the world to study taught me how to stay focused, adapt quickly, and push forward
-            even when things aren&apos;t easy.
+            I moved across the world on my own to study here, which taught me to stay focused,
+            adapt fast, and keep going even when things are tough. That experience shaped how I work
+            and how I think.
           </p>
           <p>
-            I enjoy working in team environments where I can contribute, take responsibility, and
-            help keep things on track. I don&apos;t just focus on finishing tasks. I focus on doing
-            them well and improving each time.
-          </p>
-          <p>
-            My goal is simple: keep learning, keep improving, and become someone who adds real value
-            to any team or organization I&apos;m part of.
+            I care about doing things well, not just getting them done. I like contributing to teams,
+            taking ownership, and improving every time. My goal is simple: keep learning, keep
+            growing, and be someone people can count on.
           </p>
         </motion.div>
 
@@ -102,16 +98,13 @@ export default function HeroSection() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="max-w-2xl mx-auto mb-10 p-6 rounded-2xl bg-card border border-border text-left"
+          className="max-w-xl mx-auto mb-10 p-5 rounded-2xl bg-card border border-border text-left"
         >
-          <h3 className="text-lg font-bold text-foreground mb-3">What Sets Me Apart</h3>
-          <p className="text-muted-foreground leading-relaxed mb-3">
-            I focus on consistency, accountability, and continuous improvement. I don&apos;t just aim
-            to complete tasks. I aim to improve processes, contribute to team success, and get
-            better every time.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            I bring a strong work ethic, a willingness to learn, and a mindset focused on growth.
+          <h3 className="text-base font-bold text-foreground mb-2">What Sets Me Apart</h3>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            I focus on consistency, accountability, and getting better every time. I don&apos;t just
+            aim to finish tasks. I aim to improve processes, support my team, and deliver real
+            results.
           </p>
         </motion.div>
 
@@ -120,21 +113,21 @@ export default function HeroSection() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-3 justify-center"
         >
           <button
             onClick={() => scrollTo("#resume")}
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-accent-light text-white font-medium hover:bg-accent-light/90 transition-all duration-300 shadow-lg shadow-accent-light/25 hover:shadow-xl hover:shadow-accent-light/30 hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-accent-light text-white font-medium hover:bg-blue-600 transition-all duration-300 shadow-lg shadow-accent-light/20 hover:-translate-y-0.5 text-sm"
           >
-            <FiFileText size={18} />
-            View Resume
+            <FiFileText size={16} />
+            View My Resume
           </button>
           <button
             onClick={() => scrollTo("#contact")}
-            className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full border border-border text-foreground font-medium hover:bg-muted transition-all duration-300 hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full border border-border text-foreground font-medium hover:bg-muted transition-all duration-300 hover:-translate-y-0.5 text-sm"
           >
-            <FiMail size={18} />
-            Contact Me
+            <FiMail size={16} />
+            Get in Touch
           </button>
         </motion.div>
       </div>

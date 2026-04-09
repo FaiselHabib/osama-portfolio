@@ -38,8 +38,8 @@ export default function ContactSection() {
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Let&apos;s Connect
           </h2>
-          <p className="max-w-xl mx-auto text-muted-foreground leading-relaxed">
-            I&apos;m always open to new opportunities and connections.
+          <p className="max-w-xl mx-auto text-muted-foreground leading-relaxed text-sm">
+            Always happy to talk, whether it&apos;s about opportunities, collaboration, or just connecting.
           </p>
         </motion.div>
 

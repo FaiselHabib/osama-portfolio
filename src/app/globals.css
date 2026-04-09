@@ -3,7 +3,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
+  --background: #fafafa;
   --foreground: #0f172a;
   --card: #ffffff;
   --card-foreground: #0f172a;
@@ -11,18 +11,20 @@
   --muted-foreground: #64748b;
   --accent: #1e3a5f;
   --accent-light: #2563eb;
+  --accent-warm: #7c3aed;
   --border: #e2e8f0;
 }
 
 .dark {
-  --background: #0b1120;
+  --background: #0c1120;
   --foreground: #f1f5f9;
-  --card: #111827;
+  --card: #131e31;
   --card-foreground: #f1f5f9;
   --muted: #1e293b;
   --muted-foreground: #94a3b8;
   --accent: #3b82f6;
   --accent-light: #60a5fa;
+  --accent-warm: #a78bfa;
   --border: #1e293b;
 }
 
@@ -35,6 +37,7 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-light: var(--accent-light);
+  --color-accent-warm: var(--accent-warm);
   --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -51,6 +54,6 @@ body {
 }
 
 ::selection {
-  background: var(--accent);
+  background: var(--accent-light);
   color: white;
 }
