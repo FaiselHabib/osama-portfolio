@@ -63,6 +63,27 @@ export default function GrowthSection() {
           </p>
         </motion.div>
 
+        {/* Professional Persona Video */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.55, ease: "easeOut" as const }}
+          className="mb-10"
+        >
+          <h3 className="text-lg font-bold text-foreground mb-1 text-center">Professional Persona Video</h3>
+          <p className="text-sm text-muted-foreground text-center mb-4">A short video introduction to who I am and where I&apos;m headed.</p>
+          <div className="relative w-full rounded-2xl overflow-hidden border border-border shadow-md" style={{ paddingBottom: "56.25%" }}>
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/-fNINHN2Lik"
+              title="Professional Persona Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </motion.div>
+
         <div className="grid md:grid-cols-2 gap-5">
           {sections.map((section, i) => {
             const Icon = section.icon;
