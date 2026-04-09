@@ -9,6 +9,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Growth Over Time", href: "#growth" },
+  { label: "My Style", href: "#style" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Resume", href: "#resume" },
   { label: "Let's Connect", href: "#contact" },
